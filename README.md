@@ -1,4 +1,4 @@
-# Assembly-Snake
+# boot-snake
 This is a minimalistic Snake game written in x86 Assembly, designed to run directly from the Boot Sector (512 bytes). The game demonstrates how to program at a low level, interacting directly with hardware without any operating system. It's a fun and educational project for anyone interested in bootloaders, retro programming, or assembly language.
 
 # Build & Run
