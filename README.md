@@ -10,18 +10,9 @@ This is a minimalistic Snake game written in x86 Assembly, designed to run direc
 ## Building with Make
 Run `make` or `make all` to build `build/bin/snake.bin`.
 
-## Building without Make
+## Running
 
-### Linux and macOS
-```sh
-make all
-```
-
-### Windows
-Who needs Windows?
-
-## Running with Make
-Run the binary directly in QEMU:
+Use:
 
 ```sh
 make run-bin
