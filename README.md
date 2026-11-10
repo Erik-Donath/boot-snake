@@ -6,41 +6,32 @@ This is a minimalistic Snake game written in x86 Assembly, designed to run direc
 ## Requirements
 - **NASM**: The Netwide Assembler for assembling the code.
 - **QEMU**: An emulator for testing the bootable game.
-- **Optional**: `genisoimage` for creating ISO files.
 
 ## Building with Make
-To build the binary (`.bin`), disk image (`.img`), and ISO file (`.iso`), simply run: ``` make all ```
+Run `make` or `make all` to build `build/bin/snake.bin`.
 
 ## Building without Make
 
 ### Linux and macOS
-1. Create the build directory: ``` mkdir -p build ```
-2. Assemble the code into a binary file: ``` nasm -f bin src/snake.asm -o build/snake.bin ```
-   *(Ensure NASM is installed on your system.)*
-3. Create additional formats:
-   - Disk image:``` cp build/snake.bin build/snake.img ```
-   - ISO file:``` genisoimage -o build/iso/snake.iso -b snake.bin -no-emul-boot -boot-load-size 4 -boot-info-table build/bin/ ```
-     *(Ensure `genisoimage` is installed.)*
+```sh
+nasm -f bin src/snake.asm -o build/bin/snake.bin
+```
 
 ### Windows
 Who needs Windows?
 
 ## Running with Make
-You can choose between the following commands to run the game in QEMU:
-1. Run the binary directly:
-   ``` make run-bin ```
-2. Run the disk image:
-   ``` make run-img ```
-3. Run the ISO file:
-   ``` make run-iso ```
+Run the binary directly in QEMU:
 
-## Running without Make
+```sh
+make run-bin
+```
 
-### Linux, macOS, and Windows
-You can manually run the game in QEMU using one of these commands:
-1. Run the binary directly: ``` qemu-system-i386 -drive format=raw,file=build/bin/snake.bin ```
-2. Run the disk image: ``` qemu-system-i386 -drive format=raw,file=build/img/snake.img ```
-3. Run the ISO file: ``` qemu-system-i386 -cdrom build/iso/snake.iso ```
+Or run QEMU directly:
+
+```sh
+qemu-system-i386 -drive format=raw,file=build/bin/snake.bin
+```
 
 ---
 
