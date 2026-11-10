@@ -14,7 +14,7 @@ Run `make` or `make all` to build `build/bin/snake.bin`.
 
 ### Linux and macOS
 ```sh
-nasm -f bin src/snake.asm -o build/bin/snake.bin
+make all
 ```
 
 ### Windows
